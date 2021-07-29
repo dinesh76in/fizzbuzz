@@ -5,7 +5,7 @@ public class Operation {
     private Specification specification;
     private String message;
 
-   public Operation(Specification specification, String message) {
+    public Operation(Specification specification, String message) {
         this.specification = specification;
         this.message = message;
     }

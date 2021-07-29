@@ -5,14 +5,15 @@ import com.solution.fizzbuzz.core.Operation;
 import com.solution.fizzbuzz.core.Operator;
 import com.solution.fizzbuzz.core.Specification;
 import org.springframework.stereotype.Service;
+
 import java.util.function.Predicate;
 
 @Service
 public class FizzBuzzService {
 
-    private static Operator operator;
+    private Operator operator;
 
-    public FizzBuzzService(){
+    public FizzBuzzService() {
         operator = new Operator();
         Predicate<Integer> divisibleBy3 = DivisiblePredicateFactory.divisibleBy(3);
         Predicate<Integer> divisibleBy5 = DivisiblePredicateFactory.divisibleBy(5);
@@ -25,6 +26,6 @@ public class FizzBuzzService {
     }
 
     public String fizzBuzz(Integer number) {
-       return operator.run(number);
+        return operator.run(number);
     }
 }
